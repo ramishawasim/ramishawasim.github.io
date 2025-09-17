@@ -12,7 +12,7 @@ let pageHeader = document.querySelector("header");
 pageHeader.innerHTML = headerContent;
 
 // burger
-let burgerContent =`<section id="homeBurger" ><a href=""><h2 class="burger">Home</h2></a> <img class="arrow" src="../assets/images/arrow.png"></section>
+let burgerContent =`<section id="homeBurger" ><a href="../index.html"><h2 class="burger">Home</h2></a> <img class="arrow" src="../assets/images/arrow.png"></section>
         <section id="projectsBurger"><a href="../html/grid.html"><h2 class="burger">Projects</h2></a><img class="arrow" src="../assets/images/arrow.png"></section>
         <section id="aboutBurger"><a href="../index.html"><h2 class="burger">About Me</h2></a><img class="arrow" src="../assets/images/arrow.png"></section>
         <section id="contactBurger"><a href="../html/contact.html"><h2 class="burger">Contact Me</h2></a><img class="arrow" src="../assets/images/arrow-purple.png"></section>
