@@ -14,7 +14,7 @@ pageHeader.innerHTML = headerContent;
 // burger
 let burgerContent =`<section id="homeBurger" ><a href=""><h2 class="burger">Home</h2></a> <img class="arrow" src="../assets/images/arrow.png"></section>
         <section id="projectsBurger"><a href="../html/grid.html"><h2 class="burger">Projects</h2></a><img class="arrow" src="../assets/images/arrow.png"></section>
-        <section id="aboutBurger"><a href="../html/about.html"><h2 class="burger">About Me</h2></a><img class="arrow" src="../assets/images/arrow.png"></section>
+        <section id="aboutBurger"><a href="../index.html"><h2 class="burger">About Me</h2></a><img class="arrow" src="../assets/images/arrow.png"></section>
         <section id="contactBurger"><a href="../html/contact.html"><h2 class="burger">Contact Me</h2></a><img class="arrow" src="../assets/images/arrow-purple.png"></section>
         <section id="socials">
             <a href="https://www.linkedin.com/in/ramisha-wasim-35140a262/" target="_blank" class="logo linked"></a>
