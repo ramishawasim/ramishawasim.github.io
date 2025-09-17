@@ -3,9 +3,9 @@ let headerContent=`
         <a href="#"><img id="siteLogo" src="../assets/images/logoSite.png" alt="site logo"></a>
         <nav>
             <!-- navigation bar -->
-            <a href="">Home</a>
-            <a href="../html/grid.html">Projects</a>
             <a href="../html/about.html">About Me</a>
+            <a href="../html/grid.html">Projects</a>
+            
             <button onclick="document.location='./contact.html'" >Contact Me</button> </nav>`
 
 let pageHeader = document.querySelector("header");
@@ -123,23 +123,22 @@ let footerContent =
         <nav id="navi">
             <!-- navigation for footer -->
             <article>
-                <h2>Home</h2>
-                <a href="#" target="_blank" class="nav exp">Experience</a>
-            </article>
-            <article>
-                <h2>Projects</h2>
-                <a href="../html/grid.html" class="nav art">Art</a> <br>
-                <a href="../html/grid.html#games" class="nav games">Games</a>
-            </article>
-            <article>
                 <h2>About Me</h2>
                 <a href="../html/about.html#programs" class="nav exp">Programs</a> <br>
                 <a href="../html/about.html" class="nav resume">Resume</a> <br>
                 <a href="../html/about.html#hero" class="nav edu">Education</a> 
             </article>
+            
+            <article>
+                <h2>Projects</h2>
+                <a href="../html/grid.html" class="nav art">Art</a> <br>
+                <a href="../html/grid.html#games" class="nav games">Games</a>
+            </article>
+            
         </nav>
         <a href="#"><img id="mobile" src="../assets/images/logo2.png"></a>`
 
 let pageFooter = document.querySelector("footer");
+
 
 pageFooter.innerHTML = footerContent;
