@@ -3,7 +3,7 @@ let headerContent=`
         <a href="#"><img id="siteLogo" src="../assets/images/logoSite.png" alt="site logo"></a>
         <nav>
             <!-- navigation bar -->
-            <a href="../html/about.html">About Me</a>
+            <a href="../index.html">About Me</a>
             <a href="../html/grid.html">Projects</a>
             
             <button onclick="document.location='./contact.html'" >Contact Me</button> </nav>`
@@ -142,3 +142,4 @@ let pageFooter = document.querySelector("footer");
 
 
 pageFooter.innerHTML = footerContent;
+
