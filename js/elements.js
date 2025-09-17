@@ -124,9 +124,9 @@ let footerContent =
             <!-- navigation for footer -->
             <article>
                 <h2>About Me</h2>
-                <a href="../html/about.html#programs" class="nav exp">Programs</a> <br>
-                <a href="../html/about.html" class="nav resume">Resume</a> <br>
-                <a href="../html/about.html#hero" class="nav edu">Education</a> 
+                <a href="../index.html#programs" class="nav exp">Programs</a> <br>
+                <a href="../index.html" class="nav resume">Resume</a> <br>
+                <a href="../index.html#hero" class="nav edu">Education</a> 
             </article>
             
             <article>
@@ -142,6 +142,7 @@ let pageFooter = document.querySelector("footer");
 
 
 pageFooter.innerHTML = footerContent;
+
 
 
 
