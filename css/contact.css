@@ -381,6 +381,9 @@ textarea{
         object-position: left top;
         overflow: auto;
     }
+    h1{
+        display: none;
+    }
 
     /* put the form after image */
     #form{
@@ -459,5 +462,6 @@ textarea{
     }
 
 }
+
 
 
