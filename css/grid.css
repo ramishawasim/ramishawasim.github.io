@@ -1,0 +1,357 @@
+@font-face {
+    font-family: "Inter";
+    src: url(../assets/fonts/inter/Inter-Black.otf);
+}
+
+body{
+    height: auto;
+    background-image: linear-gradient(#7C4585, #C95792);
+    font-family: "Inter", sans-serif;
+}
+
+/* for the first grid of the page */
+#art{
+    width: 100%;
+    height: auto;
+    padding-top: 200px;
+    
+
+    box-sizing: border-box;
+    
+    /* set up grid */
+    display: grid;
+    grid-template-columns: repeat(3, 450px);
+    grid-template-rows: repeat(4, 200px) 250px;
+
+    grid-template-areas: 
+    "img1 img2 img4"
+    "img1 img3 img4"
+    "img5 img6 img7"
+    "img8 img6 img9"
+    "img10 img10 img10";
+
+    gap: 10px;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+/* make the images fit inside grid*/
+.galleryItem{
+  overflow: hidden;
+  position: relative;
+  border: 1px solid black;
+}
+
+/* attach the images to the grid */
+.galleryItem:nth-child(1){
+    
+    grid-area: img1;
+
+}
+.galleryItem:nth-child(2){
+    grid-area: img2;
+}
+.galleryItem:nth-child(3){
+    grid-area: img3;
+    
+}
+.galleryItem:nth-child(4){
+    grid-area: img4;
+
+}
+.galleryItem:nth-child(5){
+    grid-area: img5;
+    
+}
+.galleryItem:nth-child(6){
+    grid-area: img6;
+    
+}
+.galleryItem:nth-child(7){
+    grid-area: img7;
+    
+}
+.galleryItem:nth-child(8){
+    grid-area: img8;
+    
+}
+.galleryItem:nth-child(9){
+    grid-area: img9;
+}
+.galleryItem:nth-child(10){
+    grid-area: img10;
+}
+
+
+/* adjust image sizing  */
+.galleryItem >img {
+    width: 100%;
+    transform-origin: center;
+}
+
+/* adjust when activated, the image scales down and opacity lowers */
+.galleryItem.active >img {
+    opacity: 0.7;
+    transform: scale(0.9);
+}
+
+/* adjust image inside grid to fit */
+.galleryItem:nth-child(4)>img{
+    width: 105%;
+}
+
+/* fix descriptions of the images */
+.galleryItem >h2{
+    width: 100%;
+    height:40px;
+    position:absolute;
+    bottom: 0px;
+    left: 50%;
+    text-align: left;
+
+    padding: 20px 0px 10px 30px;
+    
+    transform: translateX(-50%);
+
+    /* text */
+    color: rgba(255, 255, 255, 0);
+    font-size: 18px;
+
+
+    transition: all 1s ease;
+}
+
+/* the descriptions when active */
+.galleryItem.active >h2{
+    color: black;
+    background-color: #ffffffc4;
+}
+
+/* for the second grid on the page */
+.gameItem{
+    overflow: hidden;
+    position: relative;
+    border: 1px solid black;
+}
+
+/* make images fit inside grid */
+#games{
+    width: 100%;
+    height: auto;
+
+    box-sizing: border-box;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    
+    display: grid;
+    grid-template-columns: repeat(3, 450px);
+    grid-template-rows: 100px 150px 200px;
+
+    grid-template-areas: 
+    "em1 img2 em2"
+    "img1 img2 img4"
+    "img1 img3 img4";
+
+    gap: 10px;
+    justify-content: center;
+    align-content: center;
+}
+
+/* attach images to grid */
+.gameItem:nth-child(1){
+    grid-area: img1;
+}
+
+.gameItem:nth-child(2){
+    grid-area: img2;
+}
+
+.gameItem:nth-child(3){
+    grid-area: img3;
+}
+.gameItem:nth-child(4){
+    grid-area: img4;
+}
+
+.gameItem > a >img {
+    width: 100%; 
+    transform-origin: center;
+    overflow: hidden;
+    /* transition: all 1s ease; */
+}
+
+/* adjust the width of some images to fill grid */
+.gameItem:nth-child(1) >a>img{
+    width: 101%;
+}
+
+.gameItem:nth-child(4) >a>img{
+    /* width: 100%; */
+    height: 105%;
+    width: 105%;
+    place-items: center;
+}
+
+/* when image is hovered, scale down and lower opacity */
+.gameItem.active > a >img {
+    opacity: 0.7;
+    transform: scale(0.9);
+}
+
+/* description for the games */
+.gameItem >h2{
+    width: 100%;
+    height:20%;
+    position:absolute;
+    bottom: 0px;
+    left: 50%;
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 30px;
+    
+    transform: translateX(-50%);
+
+    color: rgba(255, 255, 255, 0);
+    font-size: 18px;
+
+
+    transition: all 1s ease;
+}
+
+/* when the descriptions are active */
+.gameItem.active >h2{
+    color: black;
+    background-color: #ffffffc4;
+}
+
+  /* tablet image */
+@media (max-width:1366px){
+    #art{
+        /* width: 80%; */
+        
+        grid-template-columns: repeat(3, 250px);
+        grid-template-rows: repeat(4, 100px) 150px;
+        
+    }
+    #games{
+        grid-template-columns: repeat(3, 250px);
+        grid-template-rows: 50px 100px 100px;
+    }
+    
+}
+  /* mobile version */
+@media (max-width:600px){
+
+    /* make a different grid, mobile friendly */
+    #art{
+        padding-top: 50px;
+        grid-template-columns: repeat(2, 150px);
+        grid-template-rows: repeat(6, 100px) 80px;
+
+        grid-template-areas:
+        "img1 img2"
+        "img1 img3"
+        "img4 img5"
+        "img6 img5"
+        "img7 img8"
+        "img9 img8"
+        "img10 img10";
+    }
+
+    /* fix the images to fit in grid */
+    .galleryItem:nth-child(1)>img{
+        height: 100%;
+        width: auto;
+        aspect-ratio: 1/1;
+        margin-left: -30px;
+    }
+    .galleryItem:nth-child(5)>img{
+        height: 100%;
+        width: auto;
+        aspect-ratio: 1/1;
+        margin-left: -30px;
+    }
+    .galleryItem:nth-child(6)>img{
+        margin-top: -30px;
+    }
+    .galleryItem:nth-child(8)>img{
+        height: 100%;
+        width: auto;
+        aspect-ratio: 1/1;
+        margin-left: -30px;
+    }
+
+    /* fix the description sizing for mobile */
+    .galleryItem >h2{
+        width: 100%;
+        height:100%;
+        position:absolute;
+        top:0px;
+        bottom: 0px;
+        left: 50%;
+        text-align: left;
+        padding-right: 15px;
+
+        /* padding: 20px 0px 0px 30px; */
+        
+        transform: translateX(-50%);
+
+        color: rgba(255, 255, 255, 0);
+        font-size: 12px;
+
+
+        transition: all 1s ease;
+    }
+
+    /* make grid mobile friendly */
+    #games{
+        grid-template-columns: repeat(2, 150px);
+        grid-template-rows: repeat(4, 80px);
+
+        grid-template-areas: 
+        "em1 img1"
+        "img2 img1"
+        "img4 img3"
+        "img4 em2";
+        padding-bottom: 50px;
+    }
+
+    /* fix the image sizing */
+    .gameItem > a >img {
+        width: 100%;
+        transform-origin: center;
+        overflow: hidden;
+        /* transition: all 1s ease; */
+    }
+    .gameItem:nth-child(1) >a> img{
+        width: auto;
+        height: 101%;
+        margin-left: -20px;
+    }
+    .gameItem:nth-child(4) >a> img{
+        width: auto;
+        height: 101%;
+        margin-left: -50px;
+    }
+
+    /* fix description sizing */
+    .gameItem >h2{
+        width: 100%;
+        height:100%;
+        position:absolute;
+        top:0px;
+        bottom: 0px;
+        left: 50%;
+        text-align: left;
+        padding-right: 15px;
+
+        font-size: 12px;
+
+
+        transition: all 1s ease;
+    }
+
+
+}

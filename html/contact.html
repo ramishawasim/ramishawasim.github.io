@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS reset -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css">
+    <!-- External css -->
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/elements.css">
+    <!-- Font -->
+    <link rel="stylesheet" href="https://use.typekit.net/bim1mcm.css">
+    
+    <title>Contact Me</title>
+</head>
+<body>
+    <header>
+    </header>
+
+    <section id="burgerMenu">
+    </section>
+
+    <section id="hero"></section>
+    
+    <main>
+        <!-- making the form -->
+        <section id="form">
+            <form action="" method="post">
+                <fieldset>
+                    <legend>Contact Me</legend>
+                    <ul>
+                        <li id="first">
+                            <label for="firstName" class = "labelChange">First Name</label> <br>
+                            <input id="firstName" type="text" placeholder="First Name" required class="formInput">
+                            <p>*Please put a valid name.</p>
+                        </li>
+                        <li id ="last">
+                            <label for="lastName" class = "labelChange">Last Name</label> <br>
+                            <input id="lastName" type="text" placeholder="Last Name" required class="formInput">
+                            <p>*Please put a valid name.</p>
+                        </li>
+                        <li id="mail">
+                            <label for="email" class = "labelChange">Email</label> <br>
+                            <input id="email" type="email" placeholder="Email ex. jane@doe.com" required class="formInput">
+                            <p>*Please use a valid email.</p>
+                        </li>
+                        <li id="comment">
+                            <label for="message" class = "labelChange">Message</label> <br>
+                            <textarea id="message" rows="6" cols="25" placeholder="Send A Message" required class="formInput"></textarea>
+                            <p>*Please enter a valid comment.</p>
+                        </li>
+                    </ul>
+                </fieldset>
+                <!-- submit button -->
+                <input id="submit" type="submit" value="Send Message">
+            </form>
+        </section>
+
+        <!-- my photo -->
+        <section id="image">
+
+        </section>
+
+    </main>
+    <footer>
+        <!-- <h2>Ramisha Wasim</h2>
+
+        
+        <section id="icons">
+            <a href="https://www.linkedin.com/in/ramisha-wasim-35140a262/" target="_blank" class="logo linked"></a>
+            <a href="https://ramishawasim.itch.io/" target="_blank" class="logo itch"></a>
+            <a href="https://www.instagram.com/ramisha.w/" target="_blank" class="logo insta"></a>
+        </section>
+        <nav id="navi">
+            
+            <article>
+                <h2>Home</h2>
+                <a href="#" target="_blank" class="nav exp">Experience</a>
+            </article>
+            <article>
+                <h2>Projects</h2>
+                <a href="#" target="_blank" class="nav exp">Programs</a> <br>
+                <a href="#" target="_blank" class="nav art">Art</a> <br>
+                <a href="#" target="_blank" class="nav games">Games</a>
+            </article>
+            <article>
+                <h2>About Me</h2>
+                <a href="#" target="_blank" class="nav edu">Education</a> <br>
+                <a href="#" target="_blank" class="nav resume">Resume</a>
+            </article>
+        </nav> -->
+    </footer>
+
+    <section id="popBG">
+        <div id="popUp">
+            <h3>Successfully Sent!</h3>
+            <p id="p"></p>
+            <p id="p2">You will hear from me soon on your email: </p>
+            <button id="close">Close</button>
+        </div>
+    </section>
+
+    <audio id="pop"src="/assets/audio/UI_sound.mp3"></audio>
+    <audio id="click" preload="auto" src="../assets/audio/press.mp3"></audio>
+    <script src="../js/contact.js"></script>
+    <script src="../js/elements.js"></script>
+</body>
+</html>

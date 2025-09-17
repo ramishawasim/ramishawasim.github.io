@@ -1,0 +1,454 @@
+/* Adding font, Adobe font (tomarik display) linked through html */
+@font-face {
+    font-family: "Inter";
+    src: url(../assets/fonts/inter/Inter-Black.otf);
+}
+
+
+
+
+#hero{
+    /* covering hero image, a pattern created by me */
+    background-image: url(../assets/images/organic.png);
+    background-size: cover;
+    width: 100%;
+    height:400px;
+    background-color: #7C4585;
+
+    
+}
+
+main{
+    /* starting main body */
+    width: 100%;
+    height:650px;
+    background-color: #C95792;
+
+    /* position after header */
+    padding-top: 90px;
+    margin: 0 auto;
+
+    /* border */
+    border-top: #7C4585 dotted;
+    border-bottom: 4px solid #7C4585;
+}
+#form{
+    /* position form on the left */
+    display: flex;
+    width: 50%;
+    margin-left: 150px;
+    float: left;
+}
+#form li {
+    /* formatting the form */
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px;
+
+    /* adding font */
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    
+}
+
+#form li>label {
+    display: block;
+}
+
+
+#form li>input, #message {
+    /* sizing input */
+    width: 100%;
+    font-size: 15px;
+    padding-left: 10px;
+
+    /* positioning of input boxes */
+    border: #F8B55F 2px solid;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#first, #last{
+    /* connecting together in one line */
+    width: 29%;
+}
+
+#mail, #comment {
+    /* seperate lines */
+    width: 60%;
+}
+
+#comment >textarea{
+    /* so user does not resize textarea */
+    resize: none;
+}
+
+
+
+#form legend{
+    /* title */
+    font-family: "tomarik-display" , sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+#submit{
+    /* submit button formatting */
+    margin-top: 20px;
+    margin-left: 10px;
+    box-sizing: border-box;
+    background-color: #F8B55F;
+    border-radius: 10px;
+    padding: 10px 15px;
+    color: black;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+#submit:hover{
+    /* on hover change colour */
+    background-color: #7C4585;
+}
+
+/* my image */
+#image{
+    /* positioning */
+    display: flex;
+    justify-content: right; 
+    align-items: end;
+    box-sizing: border-box;
+
+    /* size */
+    width:25%;
+    height: 80%;
+    background-color: #3D365C;
+    margin-left: 65%;
+    
+    /* styling */
+    border: #F8B55F solid 4px;
+    border-radius: 10px;
+
+    background-image: url(../assets/images/image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+
+/* popup */
+#popBG{
+    width: 100%;
+    height: 1295px; 
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    /* background-color: #2a2a3da5; */
+    background-color: #2a2a3d00;
+
+    /* display: flex; */
+    display: none;
+    transition:all 0.6s ease;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    
+}
+
+/* change bg colour of popup section */
+#popBG.appear{
+    background-color: #2a2a3da5;
+}
+
+/* creating pop-up display */
+#popUp{
+    
+    /* width: 300px; */
+
+    width: 0px;
+    height: 300px;
+    border-top: #F8B55F 20px solid;
+
+    overflow: hidden;
+    transition: all 0.6s ease 0.3s;
+    /* aspect-ratio: 2/1; */
+    background: linear-gradient(#C95792, #7C4585, #3D365C);
+
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:14px;
+    justify-content: center;
+    position: absolute;
+    border-bottom: #DFDCF0 solid 3px;
+    border-left: #DFDCF0 solid 3px;
+    border-right: #DFDCF0 solid 3px;
+    
+}
+
+#p2{
+    text-align: center;
+}
+
+/* show pop up in js */
+#popUp.show{
+    width: 500px;
+}
+
+/* heading */
+#popUp >h3{
+    color: #fff;
+    font-family: "tomarik-display", sans-serif;
+    font-size: 30px;
+    text-decoration: underline;    
+    margin-bottom: 10px;
+}
+
+/* additional comment */
+#popUp >p{
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    color: #DFDCF0;
+    margin-bottom: 25px;
+}
+
+/* button style */
+#popUp >button{
+    margin-top: 20px;
+    margin-left: 10px;
+    box-sizing: border-box;
+    background-color: #F8B55F;
+    border-color: #DFDCF0;
+    border-radius: 10px;
+    padding: 10px 15px;
+    color: black;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+form> fieldset> ul li input.isOnFocus{
+    border-bottom: 2px solid #f35e13;
+    background-color: #3D365C50;
+    color: #fff;
+
+}
+
+form> fieldset> ul> li> textarea.isOnFocus{
+    border-bottom: 2px solid #f35e13;
+    background-color: #3D365C50;
+    color: #fff;
+    
+}
+
+form> fieldset> ul li input.isEmpty{
+    border-bottom: 2px solid red;
+    border: 2px solid red;
+    background-color: #3D365C50;
+    color: #fff;
+}
+form p{
+    opacity:0;
+    color: #F8B55F;
+    margin-top: 10px;
+}
+form p.errorAppear{
+    opacity:1;
+}
+/* label change */
+label{
+    transition: all 0.6 ease;
+}
+
+label.labelOnFocus{
+    color:#DFDCF0;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+label.labelIsWrong{
+    color: #F8B55F;
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: 10px;
+    text-decoration: underline;
+}
+
+form>fieldset> ul li input[type="submit"]{
+    width: 80%;
+    height: 32px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+form>fieldset> ul>li> textarea{
+    width: 80%;
+    border: none;
+    border-radius: 5px;
+    /* color: #fff; */
+    text-transform: uppercase;
+}
+textarea{
+    color: black;
+}
+
+
+  /* tablet image */
+@media (max-width:1366px){
+    #image{
+        margin-top: 100px;
+        height:50%;
+    }
+}
+
+  /* mobile version */
+@media (max-width:600px){
+
+    /* change main height */
+    main{
+        height:850px;
+        overflow: hidden;
+    }
+
+    /* give min width and position, dont want it stuck to the top of phone */
+    header{
+        min-width: 300px;
+        position: relative;
+    }
+    /* margin, gap fix */
+    header nav{
+        gap:5px;
+        margin-right: 25px;
+    }
+
+    /* get rid of the text in header */
+    header >nav >a{
+        color: transparent;
+    }
+
+    /* fix formatting of button */
+    header >nav >button{
+        border-radius: 50px;
+        padding: 10px 30px;
+        font-size: 9px;
+
+    }
+
+    header>img{
+        margin-left: 25px;
+    }
+
+
+    #hero{
+        height:200px;
+    }
+
+    /* fix the position of the image, make it before the form */
+    #image{
+        
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        margin-top: -80px;
+        position: relative;
+        bottom: 95%;
+        left: 25%;
+
+        /* make a circle for the image instead */
+        width: 50%;
+        height: 25%;
+        border-radius: 200px;
+ 
+        object-position: left top;
+        overflow: auto;
+    }
+
+    /* put the form after image */
+    #form{
+        margin-top: 150px;
+        margin-left: 55px;
+        float: none;
+        width:100%;
+    }
+
+    /* center in the middle of phone */
+    #form legend{
+        font-size: 25px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 65px;
+    }
+
+    /* center button */
+    #submit{
+        margin-left: 65px;
+    }
+
+    /* fixing margin and padding */
+    footer nav{
+        gap:10px;
+        margin-right: 0;
+        padding: 0;
+    }
+
+    /* sizing down text */
+    #navi >article> a{
+        font-family: "Inter" , sans-serif;
+        font-size: 9px;
+        line-height: 0.8;
+   
+    }
+
+    /* icon sizes */
+    .logo{
+        margin-top: 80px;
+
+        width: 30px;
+        height: 30px;
+        padding: 0px;
+    }
+
+    /* fxing links */
+    footer >a {
+        gap:10px;
+        width: 10px;
+        height: 5px;
+    }
+
+    /* position */
+    #icons{
+        
+        gap:5px;
+        width:45%;
+        margin-left: 0;
+    }
+    footer >h2{
+        font-size: 9;
+    }
+
+    /* resize popUp */
+    #popUp.show{
+        width:350px;
+        height:300px;
+
+    }
+    #popUp >h3{
+        font-size: 20px;
+    }
+    #popUp >button{
+        margin-top: 10px;
+    }
+
+}
+

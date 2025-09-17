@@ -1,0 +1,725 @@
+/* Adding font, Adobe font (tomarik display) linked through html */
+@font-face {
+    font-family: "Inter";
+    src: url(../assets/fonts/inter/Inter-Black.otf);
+}
+
+
+
+
+/* hero section */
+#hero{
+
+    padding-top: 150px;
+    background-size: cover;
+    width: 100%;
+    height:600px;
+    background-color: #7C4585;
+    display: flex;
+
+    justify-content: center;
+}
+
+#me{
+    /* positioning */
+    /* size */
+    height:150px;
+    width: 150px;
+    aspect-ratio: 1/1;
+    
+    /* styling */
+    border: #F8B55F solid 4px;
+    border-radius: 300px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 10px;
+
+    opacity: 0;
+    margin-top: 100px;
+    transition: all 1s ease;
+}
+
+#me.fadeIn{
+    margin-top: 50px;
+    opacity: 1;
+}
+
+
+
+/* text section of hero */
+#text{
+    width:40%;
+    margin-left: 50px;
+    color: #fff;
+}
+
+#text >p{
+    padding-top: 50px;
+    width:100%;
+    font-size: 22px;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+}
+
+#text >h1{
+    padding-top: 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 55px;
+}
+
+#text >h2{
+    font-size:18px;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* sticky note with my welcome message */
+#sticky{
+    height:350px;
+    width:350px;
+    background-color: #F8B55F;
+    margin-left: 200px;
+    margin-top: 200px;
+    border-radius: 250px;
+    border-left: 8px black dotted;
+    box-shadow: 10px 10px;
+
+    transition: all 1s ease;
+
+}
+
+/* styling when it fades in */
+#sticky.fadeIn{
+    margin-top: 100px;
+    opacity: 1;
+}
+
+/* text of sticky note */
+#sticky>p{
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 50px;
+    padding:85px 10px 20px 10px;
+    line-height:65px;
+    
+}
+
+/* for mobile */
+#meTwo{
+    display: none;
+    aspect-ratio: 1/1;
+    
+    /* styling */
+    border: #C95792 solid 4px;
+    border-radius: 300px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+/* the about me text */
+#left>p{
+    margin-left: 280px;
+    margin-top: 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 20px; 
+    color: #DFDCF0;
+    
+}
+#left>p>a{
+    color: #F8B55F;
+}
+
+main{
+    overflow-y: hidden;
+    /* starting main body */
+    width: 100%;
+    /* height:650px; */
+    background-color:#7C4585;
+
+    /* position after header */
+    margin: 0 auto; 
+    overflow-x: hidden;
+
+    /* border */
+    border-top: #F8B55F dotted;
+    border-bottom: 4px solid #7C4585;
+}
+
+/* education section */
+#edu{
+    width: 100%;
+    height:380px;
+    background-color: #7C4585;
+    
+
+    display: flex;
+    /* justify-content: center; */
+    justify-content: space-evenly;
+    margin-top: 100px;
+
+}
+
+/* make all the header text the same */
+main>section>h1{
+    font-family: "Inter", sans-serif;
+    font-size: 55px;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+/* for york education */
+#york{
+    display: flex;
+    font-family: "Inter", sans-serif;
+    color: #DFDCF0;
+}
+
+/* adjust image size */
+#yorklogo{
+    
+    width: 250px;
+    height:250px;
+}
+
+/* adjust descriptive text */
+#yorkText{
+    margin-left: 35px;
+    width:200px;
+    height: 200px;
+}
+
+/* adjust the header */
+#yorkText>h1{
+    font-size: 35px;
+}
+
+/* adjust styling of the sub header */
+#yorkText>h2{
+    font-weight: 300;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* adjust styling of paragraph */
+#yorkText>p{
+    margin-top: 30px;
+    width:90%;
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* seneca section */
+#seneca{
+    display: flex;
+    font-family: "Inter", sans-serif;
+    color: #DFDCF0;
+}
+
+/* adjust image size */
+#senecalogo{
+    width: 250px;
+    height:250px;
+}
+
+/* adjust text styling */
+#senecaText{
+    margin-left: 35px;
+    width:200px;
+    height: 200px;
+}
+
+/* adjust header styling */
+#senecaText>h1{
+    font-size: 35px;
+}
+
+/* adjust sub header styling */
+#senecaText>h2{
+    font-weight: 300;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* adjust the paragraph */
+#senecaText>p{
+    margin-top: 30px;
+    width:90%;
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* programs section */
+#programs{
+    width:100%;
+    height:1150px;
+    background-color: #C95792;
+    border-top: #F8B55F dotted; 
+}
+
+/* fix the sizing */
+#prog{
+    overflow-y: hidden;
+    margin-left: 150px;
+    opacity: 0;
+    margin-top: 100px; 
+    transition: all 1s ease;
+   
+}
+
+/* animation */
+#prog.fadeUp{
+    opacity: 1;
+    margin-top: 0px;
+}
+
+.photo{
+    /* formatting the logo icons for social media */
+    /* position: relative; */
+    display: inline-block;
+    margin-top: 60px;
+    margin-left: 60px;
+    margin-right: 60px;
+    
+    /* gap:70px; */
+    box-sizing: border-box;
+    /* justify-content: space-evenly; */
+
+    /* formatting images */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #3D365C;
+
+    /* styling */
+    border: #C95792 2px solid;
+    border-radius: 30px;
+
+    /* sizing */
+    /* padding: 20px; */
+    font-size: 30px;
+    width: 10%;
+    aspect-ratio: 1/1;
+    text-align: center;
+    
+}
+
+.photo:hover{
+    /* on hover change opacity */
+    opacity: 50%;
+    width:11%;
+}
+.ps{
+    background-image: url(../assets/images/photoshop.png);
+}
+.ai{
+    background-image: url(../assets/images/illustrator.png);
+}
+.ind{
+    background-image: url(../assets/images/indesign.png);
+}
+.aud{
+    background-image: url(../assets/images/audition.png);
+}
+.light{
+    background-image: url(../assets/images/lightroom.png);
+}
+.premiere{
+    background-image: url(../assets/images/premiere.png);
+}
+.maya{
+    background-image: url(../assets/images/maya.png);
+}
+.unity{
+    background-image: url(../assets/images/unity.png);
+}
+.excel{
+    background-image: url(../assets/images/excel.png);
+}
+.powerp{
+    background-image: url(../assets/images/powerpoint.png);
+}
+.ht{
+    background-image: url(../assets/images/html.png);
+}
+.android{
+    background-image: url(../assets/images/androidstudio.png);
+}
+.figma{
+    background-image: url(../assets/images/figma.png);
+}
+.canva{
+    background-image: url(../assets/images/canva.png);
+}
+.git{
+    background-image: url(../assets/images/github.png);
+}
+
+#service{
+    /* margin-top: 100px; */
+    border-top: #F8B55F dotted;
+    width:100%;
+    height:800px;
+    background-image: linear-gradient(#C95792, #d19eb8);
+    max-width: 100%;
+}
+
+/* service section */
+#ser{
+    display: flex;
+    box-sizing: border-box;
+    width:100%;
+    height:650px;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+
+    margin-top:100px;
+    opacity:0;
+    transition: all 1s ease;
+    
+}
+
+/* animations */
+
+#ser.fadeUp{
+    margin-top: 0px;
+    opacity: 1;
+}
+
+
+/* first service */
+#paint{
+
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 60px;
+    display: flex;
+    box-sizing: border-box;
+    
+}
+/* adjust image sizing */
+#paintLogo{
+    width: 200px;
+    height:200px;
+}
+
+/* adjust the text */
+#paintText{
+    font-family: "Inter", sans-serif;
+    margin-left: 35px;
+    width:220px;
+    height: 200px;
+    margin-top: 20px;
+}
+
+/* adjust header */
+#paintText>h1{
+    font-size: 35px;
+}
+
+/* adjsut description */
+#paintText>p{
+    font-weight: 300;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+
+
+
+/* to make it more responsive */
+@media(max-width:1505px){
+    /* fixing text sizes */
+    #text{
+        width:60%;
+        margin-left:30px;
+
+    }
+    
+ }
+
+  /* tablet image */
+@media (max-width:1366px){
+
+    /* changing style of sticky note to square */
+    #sticky{
+        border-radius: 0;
+    }
+
+    /* adjusting text size */
+    #sticky>p{
+       
+        font-size: 55px;
+        padding:55px 10px 20px 10px;
+        line-height:75px;
+    }
+
+    #text{
+        width:50%;
+        margin-left:30px;
+    }
+    #text >p{  
+    font-size: 16px;
+    }
+
+    #text >h1{
+    font-size: 35px;
+    }
+
+    #text >h2{
+    font-size:12px;
+    }
+
+    /* fixing size of the note */
+    #sticky{
+        height:200px;
+        width:200px;
+    }
+    #sticky>p{
+    font-size: 35px;
+    /* padding:50px 10px 20px 10px; */
+    line-height:35px;
+    }
+    #sticky{
+        margin-left: 80px;
+        margin-top: 100px;
+        opacity: 0;
+    }
+    #sticky.fadeIn{
+        margin-top: 50px;
+        opacity: 1;
+    }
+    #left>p{
+        margin-left: 80px;
+    }
+
+    /* change size for the headers */
+    main>section>h1{
+        font-family: "Inter", sans-serif;
+        font-size: 25px;
+        margin-left: 50px;
+        margin-top: 50px;
+    }
+
+    /* change image sizes to be mobile friendly */
+    #yorklogo{
+        
+        width: 150px;
+        height:150px;
+    }
+    #senecalogo{
+        width: 150px;
+        height:150px;
+    }
+
+
+    #yorkText>h1{
+        font-size: 15px;
+    }
+
+
+    #senecaText>h1{
+        font-size: 15px;
+    }
+
+    /* adjust margins */
+    #edu{
+        
+        margin-top: 200px;
+        opacity: 0;
+
+        transition: all 1s ease;
+
+    }
+    #edu.fadeUp{
+        opacity:1;
+        margin-top: 100px;
+    }
+
+   
+    /* adjust image sizing to be responsive for mobile */
+    #prog{
+        margin-left: 90px;
+    }
+    .photo{
+        margin-left: 30px;
+        margin-top: 30px;
+        margin-right: 30px;
+    }
+    #programs{
+        height:600px;
+    }
+    #paint{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 60px;
+        box-sizing: border-box;
+    }
+    #paintLogo{
+        width: 100px;
+        height:100px;
+        margin-top: 30px;
+    }
+    #paintText{
+        font-family: "Inter", sans-serif;
+        margin-left: 35px;
+        width:220px;
+        height: 200px;
+        /* margin-top: 20px; */
+    }
+     #paintText>h1{
+        font-size: 25px;
+    }
+
+
+}
+
+  /* mobile version */
+@media (max-width:600px){
+
+    /* change main height */
+    main{
+        /* height:800px; */
+        /* overflow: hidden; */
+        min-height: 1950px;
+        
+    }
+
+    /* change sizing of seciton */
+    #hero{
+        min-height:400px;
+    }
+
+    /* icon sizes */
+    .logo{
+        margin-top: 80px;
+
+        width: 30px;
+        height: 30px;
+        padding: 0px;
+    }
+
+    /* adjust sizing for images and text */
+    #text{
+        display: none;
+    }
+    #hero{
+        padding-top: 0px;
+    }
+    #sticky{
+        height: 250px;
+        margin-left: 25px;
+        margin-top: 50px;
+    }
+    #sticky>p{
+        margin-top: -50px;
+    }
+
+    /* display the mobile version of the image */
+    #meTwo{
+        display:inline;
+        width: 100px;
+        height: 100px;
+    }
+    #hero{
+        height: 350px;
+    }
+    #left>p{
+    margin-left: 30px;
+    margin-top: 30px;
+    }
+
+    #edu{
+        display: flex;
+        box-sizing: border-box;
+        margin-left: 20px;
+        justify-content:center;
+        flex-direction: column;
+        height:300px;
+        
+    }
+    #yorklogo{
+        width: 100px;
+        height: 100px;
+    }
+    #senecalogo{
+        width: 100px;
+        height: 100px;
+    }
+
+    main>section>h1{
+        margin-top: 20px;
+        margin-left: 15px;
+    }
+    #prog{
+        margin-left:20px;
+        margin-top: 100px;
+    }
+    #prog.fadeUp{
+        opacity: 1;
+        margin-top: 20px;
+    }
+    .photo{
+        margin-top: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+        width:10%;
+        
+    }
+    #programs{
+        /* height: 1000px; */
+        height: 300px;
+    }
+
+    #service{
+        height: 1200px;
+        
+    }
+    #ser{
+        height: 500px;
+        
+    }
+
+    #paint{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 60px;
+        box-sizing: border-box;
+    }
+    #paintLogo{
+        width: 100px;
+        height:100px;
+        margin-top: 30px;
+    }
+    #paintText{
+        font-family: "Inter", sans-serif;
+        margin-left: 35px;
+        width:200px;
+        height: 200px;
+        /* margin-top: 20px; */
+    }
+
+    #paintText>h1{
+        font-size: 25px;
+    }
+    #paintText>p{
+        font-size: 18px;
+        font-weight: 300;
+        margin-top: 10px;
+        font-style: italic;
+    }
+
+    /* hide the desktop version of my image */
+    #me{
+        display: none;
+    }
+
+
+}
+

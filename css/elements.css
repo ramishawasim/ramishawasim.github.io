@@ -1,0 +1,470 @@
+header {
+    width: 100vw;
+    height: 90px;
+
+    /* setting the colour scheme */
+    background-color: #3D365C;
+
+    /* align items on the header */
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: space-between;
+
+    /* fix to top of page */
+    position: fixed;
+    border-bottom: 4px solid #F8B55F;
+    z-index: 100;
+}
+
+#siteLogo {
+    /* setting size */
+    width: 30px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+
+    /* positioning on the left of nav */
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-left: 50px;
+    align-items: center;
+
+    transition: all 0.6s ease 0.3s;
+   
+}
+
+/* on hover have it scale down and change opacity */
+#siteLogo:hover{
+    transform: scale(0.9);
+    opacity: 70%;
+}
+
+/* on press rotate the logo 90deg */
+#siteLogo.press{
+    transform: rotate(90deg);
+}
+
+/* make it so that the body cant be scrolled, stuck in burger menu */
+body.active{
+    overflow: hidden;
+}
+
+/* positioning header */
+header nav {
+
+    display: flex;
+    gap:40px;
+    margin-right: 50px;
+    text-align: right;
+    align-items: center;
+}
+
+/* disable nav for the burger */
+header nav.disable{
+    display: none;
+}
+
+/* style the links in nav */
+header >nav a{
+    /* setting font */
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+    color: #DFDCF0;
+}
+
+/* style the nav on hover (underline)*/
+header> nav a:hover{
+    /* on hover underline */
+    text-decoration: underline;
+}
+
+/* button on navigation styling */
+header >nav >button{
+    box-sizing: border-box;
+    background-color: #F8B55F;
+    border-radius: 10px;
+    padding: 10px 15px;
+    color: black;
+    font-family: "Inter", sans-serif;
+
+    /* text fix */
+    font-weight: 300;
+    font-size: 14px;
+    
+}
+
+header> nav> button:hover{
+    /* on hover change colour */
+    background-color: #7C4585;
+}
+
+/* burger menu positioning and styling */
+#burgerMenu{
+    /* have it ontop of everything on the page */
+    z-index: 99;
+    /* positioning */
+    width: 0;
+    height:100vh;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+
+    transition: all 1s ease 0.3s;
+    /* make it so theres no scrolling, stuck on burger page */
+    overflow-y: hidden;
+
+}
+
+/* style headers for burger */
+#burgerMenu a >h2{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0);
+    font-size: 0px;
+
+    padding-top: 40px;
+    padding-left: 20px;   
+
+    transition: all 1s ease ;
+}
+
+
+/* make headers when the burger menu is active visible*/
+#burgerMenu a >h2.isActive{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: white;
+
+    font-size: 20px;
+    padding-top: 40px;
+    padding-left: 20px;   
+}
+
+/* when the headers are hovered over, increase text size */
+#burgerMenu a>h2:hover{
+    font-size: 25px;
+}
+
+/* get rid of the underlines for the anchor links */
+#burgerMenu a{
+    text-decoration: none;
+}
+
+/* adjust the arrow images and positions */
+#burgerMenu img{
+    width:0px;
+    height: 0px;
+    padding-top: 30px;
+    padding-right: 20px;
+}
+
+/* make the arrows visible when burger menu active */
+#burgerMenu img.active{
+    width:50px;
+    height: 50px;
+    padding-top: 30px;
+    padding-right: 20px;
+}
+
+/* make the arrow and text have space between */
+#homeBurger, #projectsBurger, #aboutBurger, #contactBurger{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* giving the sections in burger menu widths */
+#homeBurger{
+    margin-top: 90px;
+    background-color: #3D365C;
+    border-top: 2px solid #F8B55F;
+    height: 100px;
+}
+#projectsBurger{
+    background-color: #7C4585;
+    height: 100px;
+}
+#aboutBurger{
+    background-color: #C95792;
+    height: 100px;
+}
+#contactBurger{
+    background-color: #F8B55F;
+    height: 800px;
+}
+
+/* make the burger menu active */
+#burgerMenu.activeBurg{
+    width: 100%;
+    display: block;
+
+}
+
+/* social icons on the bottom of the burger menu */
+#socials{
+    /* positioning */
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    margin-left: 10px;
+    display: none;
+    
+    /* width:40% */
+}
+
+/* make the socials visible when burger menu active */
+#socials.active{
+    
+    /* positioning */
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    margin-left: 10px;
+    display: inline-block;
+    /* width:40% */
+}
+
+/* designing footer */
+footer{
+    /* sizing */
+    width: 100%;
+    height:150px;
+    background-color: #F8B55F;
+}
+
+
+.logo{
+    /* formatting the logo icons for social media */
+    display: inline-block;
+    margin-left: 15px;
+    margin-top: 40px;
+    gap:20px;
+    box-sizing: border-box;
+
+    /* formatting images */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #3D365C;
+
+    /* styling */
+    border: #C95792 2px solid;
+    border-radius: 10px;
+
+    /* sizing */
+    /* padding: 20px; */
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    
+}
+
+.logo:hover{
+    /* on hover change opacity */
+    opacity: 50%;
+}
+
+/* adding social media vectors */
+.linked{
+    background-image: url(../assets/images/linked.png);
+}
+
+.itch{
+    border-radius: 50px;
+    background-image: url(../assets/images/itch.png);
+}
+
+.insta{
+    border-radius: 15px;
+    background-image: url(../assets/images/instagram.png);
+}
+
+footer >h2{
+    /* my name in header */
+    box-sizing: border-box;
+    padding-top: 15px;
+    padding-left: 20px;
+    font-family: "Inter" , sans-serif;
+    font-weight: 300;
+    width: 40%;
+
+}
+
+footer nav {
+    /* sizing */
+    width: 50%;
+
+    /* positioning */
+    display: flex;
+    justify-content: end;
+    float: right;
+    gap:40px;
+    margin-right: 50px;
+
+    text-align: right;
+    align-items: top;
+    padding: 0;
+    
+}
+
+#navi{
+    /* small navigation bottom right */
+    text-align: left;
+    font-family: "Inter" , sans-serif;
+    font-weight: 400;
+    top: 0;
+
+}
+
+#navi >article> a{
+    /* change colour of the links */
+    font-family: "Inter" , sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+    color: rgb(73, 73, 73);
+    line-height: 1.4;
+   
+}
+
+#navi >article> a:hover{
+    /* on hover, emphasize */
+    color: black;
+}
+
+#navi > article > h2 {
+    /* increase space below */
+    margin-bottom: 10px;
+}
+
+#icons{
+    /* positioning */
+    margin-left: 10px;
+    display: inline-block;
+    width:40%
+}
+#mobile{
+    display: none;
+}
+
+/* animation */
+/* @keyframes siteLogo {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, 1px) rotate(0deg); }
+} */
+
+
+@media (max-width:600px){
+
+    /* change main height */
+    main{
+        height:800px;
+        overflow: hidden;
+    }
+
+    /* give min width and position, dont want it stuck to the top of phone */
+    header{
+        min-width: 300px;
+        position: relative;
+    }
+    /* margin, gap fix */
+    header nav{
+        gap:5px;
+        margin-right: 25px;
+    }
+
+    /* get rid of the text in header */
+    header >nav >a{
+        color: transparent;
+    }
+
+    /* fix formatting of button */
+    header >nav >button{
+        border-radius: 50px;
+        padding: 10px 30px;
+        font-size: 9px;
+
+    }
+
+    header>img{
+        margin-left: 25px;
+    }
+
+
+    
+
+    /* fixing margin and padding */
+    footer nav{
+        gap:10px;
+        margin-right: 0;
+        padding: 0;
+    }
+
+    /* sizing down text */
+    #navi >article> a{
+        font-family: "Inter" , sans-serif;
+        font-size: 9px;
+        line-height: 0.8;
+   
+    }
+
+    /* icon sizes */
+    .logo{
+        margin-top: 80px;
+
+        width: 30px;
+        height: 30px;
+        padding: 0px;
+    }
+
+    /* fxing links */
+    footer >a {
+        gap:10px;
+        width: 10px;
+        height: 5px;
+    }
+
+    /* position */
+    #icons{
+        
+        gap:5px;
+        width:45%;
+        margin-left: 0;
+    }
+    /* fixing font size */
+    footer >h2{
+        font-size: 9;
+        opacity: 0;
+    }
+    /* resizing for mobile, using mobile footer instead */
+    #icons{
+        display: none;
+    }
+    #navi{
+        display: none;
+    }
+
+    /* mobile footer, one picture positioning and sizing */
+    #mobile{
+        
+        display: block;
+        width: 150px;
+        height: auto;
+        
+        margin: auto;
+        
+    }
+
+  }
+

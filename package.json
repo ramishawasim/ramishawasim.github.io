@@ -1,0 +1,16 @@
+{
+  "name": "contact",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start":"npm run lite",
+    "lite":"lite-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
