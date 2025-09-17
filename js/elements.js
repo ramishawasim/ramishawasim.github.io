@@ -4,7 +4,7 @@ let headerContent=`
         <nav>
             <!-- navigation bar -->
             <a href="../index.html">About Me</a>
-            <a href="../html/grid.html">Projects</a>
+            <a href="../grid.html">Projects</a>
             
             <button onclick="document.location='./html/contact.html'" >Contact Me</button> </nav>`
 
@@ -142,6 +142,7 @@ let pageFooter = document.querySelector("footer");
 
 
 pageFooter.innerHTML = footerContent;
+
 
 
 
